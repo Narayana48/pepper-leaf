@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pepper Leaf Disease Detection using deep learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: url('static/images/pepper.jpeg') center / cover;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero .title {
+            color: white;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: white;
+        }
+
+        .file-name {
+            color: white;
+        }
+
+        .bd-footer-link {
+            background-color: white;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<section class="hero is-fullheight">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title">
+                Pepper Leaf Disease Detection using deep learning
+            </h1>
+            <p class="subtitle">
+                Check if pepper leaf is Healthy or Unhealthy!
+            </p>
+            <form action="/classify" method="post" enctype="multipart/form-data">
+                <div class="file has-name is-centered">
+                    <label class="file-label">
+                        <input class="file-input" type="file" id="image" name="image">
+                        <span class="file-cta">
+                            <span class="file-label">
+                                Upload an image
+                            </span>
+                        </span>
+                        <span class="file-name" id="file-name">
+                            No file chosen
+                        </span>
+                    </label>
+                </div>
+                <br>
+                <input type="submit" value="Classify" class="button is-black" name="image" id="classify_button">
+            </form>
+        </div>
+    </div>
+</section>
+
+<nav class="level">
+    <div class="level-item has-text-centered">
+        <div>
+            <img src="static/images/pepper.jpeg" width="200px" height="200px" alt="Pepper Image">
+        </div>
+    </div>
+</nav>
+
+<section class="bd-footer-link">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <article class="media notification has-background-white">
+                    <div class="media-content">
+                        <div class="content">
+                            <p class="subsubtitle">
+                                <strong>Contact</strong>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="media notification has-background-white">
+                    <div class="media-content">
+                        <div class="content">
+                            <div class="columns">
+                                <!-- Additional content goes here if needed -->
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/static/script.js"></script>
+</body>
+
+</html>
